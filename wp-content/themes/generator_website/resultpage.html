@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hindu Baby Name Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Hindu Baby Names</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active ms-3" href="homepage.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link ms-3" href="#">Blog</a></li>
+        <li class="nav-item"><a class="nav-link ms-3" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Summary -->
+<section class="py-4 bg-light text-center">
+  <div class="container">
+    <h5 class="mb-0">👶 Gender: <strong>Boy</strong> | 🌌 Nakshatra: <strong>Rohini</strong> | 🔠 Letter: <strong>Ro</strong></h5>
+  </div>
+</section>
+
+
+<!-- Name Results -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Suggested Baby Names</h2>
+    <div class="row g-4" id="nameCards">
+      <!-- Name cards will be injected here -->
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-4">
+      <button id="loadMore" class="btn btn-outline-primary">Load More</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="text-center mt-5">
+      <p id="selectedName" class="fw-bold text-primary"></p>
+      <button class="btn btn-success me-2">Download as PDF</button>
+      <a href="homepage.html"><button class="btn btn-outline-secondary">Try Another Nakshatra</button></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4 text-center">
+  <div class="container">
+    <p><strong>About Us:</strong> <br> Hindu Baby Names is a cultural platform designed to help parents choose the perfect baby name based on Nakshatra, gender, and tradition. We honor Vedic naming practices with a modern interface for today’s families. Hindu Baby Names is a cultural platform designed to help parents choose the perfect baby name based on Nakshatra, gender, and tradition. We honor Vedic naming practices with a modern interface for today’s families.</p>
+   <!-- Social Icons -->
+   <p>Follow us:</p>
+   <div class="social-icons d-flex justify-content-center gap-3 mb-3">
+      <a href="#" class="social-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon pinterest" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+    <p class="mb-0 small">&copy; 2025 Hindu Baby Name Generator. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const nameData = [
+    { name: "Rohit", meaning: "Sun, Brilliance", origin: "Sanskrit" },
+    { name: "Roshan", meaning: "Bright, Light", origin: "Sanskrit" },
+    { name: "Romit", meaning: "Delightful", origin: "Hindi" },
+    { name: "Rohan", meaning: "Ascending", origin: "Sanskrit" },
+    { name: "Ronit", meaning: "Celebrated", origin: "Hebrew" },
+    { name: "Ronav", meaning: "Charming", origin: "Sanskrit" },
+    { name: "Rudra", meaning: "Name of Shiva", origin: "Sanskrit" },
+    { name: "Rupesh", meaning: "Lord of beauty", origin: "Hindi" },
+    { name: "Ruchir", meaning: "Beautiful", origin: "Sanskrit" },
+    { name: "Rupin", meaning: "Embodiment of beauty", origin: "Sanskrit" },
+    { name: "Rukma", meaning: "Radiant", origin: "Sanskrit" },
+    { name: "Ritesh", meaning: "Lord of truth", origin: "Hindi" },
+    { name: "Ravish", meaning: "Sun", origin: "Sanskrit" },
+    { name: "Rajiv", meaning: "Lotus flower", origin: "Sanskrit" },
+    { name: "Rajeev", meaning: "Blue lotus", origin: "Sanskrit" },
+    { name: "Ravindra", meaning: "Lord of sun", origin: "Sanskrit" },
+    { name: "Ritvik", meaning: "Priest", origin: "Sanskrit" },
+    { name: "Raghav", meaning: "Descendant of Raghu", origin: "Sanskrit" },
+    { name: "Rajesh", meaning: "King of kings", origin: "Sanskrit" },
+    { name: "Ravansh", meaning: "Part of Sun", origin: "Hindi" }
+  ];
+
+  let currentPage = 1;
+  const perPage = 6;
+  const nameContainer = document.getElementById("nameCards");
+  const selectedNameEl = document.getElementById("selectedName");
+
+  function renderNames() {
+    const start = (currentPage - 1) * perPage;
+    const end = start + perPage;
+    const visibleNames = nameData.slice(start, end);
+
+    visibleNames.forEach(data => {
+      const col = document.createElement("div");
+      col.className = "col-md-6 col-lg-4";
+      col.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">${data.name}</h5>
+            <p class="card-text text-muted">☀️ Meaning: ${data.meaning}</p>
+            <p class="card-text"><strong>Origin:</strong> ${data.origin}</p>
+            <span class="heart"><i class="fas fa-heart"></i></span>
+          </div>
+        </div>
+      `;
+      nameContainer.appendChild(col);
+    });
+
+    attachHeartListeners();
+
+    if (end >= nameData.length) {
+      document.getElementById("loadMore").style.display = "none";
+    }
+  }
+
+  function attachHeartListeners() {
+    const hearts = document.querySelectorAll(".heart");
+    hearts.forEach(heart => {
+      heart.onclick = () => {
+        hearts.forEach(h => h.classList.remove("liked"));
+        heart.classList.add("liked");
+        const name = heart.parentElement.querySelector(".card-title").textContent;
+        selectedNameEl.textContent = `You selected: ${name}`;
+      };
+    });
+  }
+
+  document.getElementById("loadMore").addEventListener("click", () => {
+    currentPage++;
+    renderNames();
+  });
+
+  renderNames(); // Initial load
+</script>
+
+</body>
+</html>

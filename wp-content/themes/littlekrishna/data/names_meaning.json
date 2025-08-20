@@ -1,0 +1,272 @@
+{
+  "ashwini": {
+    "gender": "male",
+    "syllables": ["Chu", "Che", "Cho", "La"],
+    "names": [
+      {"name": "Chirag", "meaning": "Lamp or light"},
+      {"name": "Chandan", "meaning": "Sandalwood, fragrance"},
+      {"name": "Charan", "meaning": "Feet, symbolizing reverence"},
+      {"name": "Lalit", "meaning": "Beautiful, charming"}
+    ]
+  },
+  "bharani": {
+    "gender": "female",
+    "syllables": ["Lee", "Lu", "Le", "Lo"],
+    "names": [
+      {"name": "Lina", "meaning": "Absorbed, united"},
+      {"name": "Laxmi", "meaning": "Goddess of wealth and prosperity"},
+      {"name": "Leena", "meaning": "Devoted, tender"},
+      {"name": "Lopa", "meaning": "Loss, absence"}
+    ]
+  },
+  "krittika": {
+    "gender": "female",
+    "syllables": ["A", "E", "U", "Ea"],
+    "names": [
+      {"name": "Asha", "meaning": "Hope, desire"},
+      {"name": "Esha", "meaning": "Desire, wish"},
+      {"name": "Uma", "meaning": "Goddess Parvati, light"},
+      {"name": "Eka", "meaning": "One, unique"}
+    ]
+  },
+  "rohini": {
+    "gender": "female",
+    "syllables": ["O", "Va", "Vi", "Vu"],
+    "names": [
+      {"name": "Vina", "meaning": "Musical instrument"},
+      {"name": "Vivek", "meaning": "Wisdom, discernment"},
+      {"name": "Vijay", "meaning": "Victory"},
+      {"name": "Vandana", "meaning": "Salutation, worship"}
+    ]
+  },
+  "mrigashira": {
+    "gender": "male",
+    "syllables": ["Ve", "Vo", "Ka", "Ke"],
+    "names": [
+      {"name": "Karan", "meaning": "Helper, ear"},
+      {"name": "Keshav", "meaning": "One of Lord Krishna's names"},
+      {"name": "Vikram", "meaning": "Bravery, valor"},
+      {"name": "Vedant", "meaning": "Ultimate knowledge"}
+    ]
+  },
+  "ardra": {
+    "gender": "male",
+    "syllables": ["Ku", "Gha", "Ng", "Na"],
+    "names": [
+      {"name": "Kunal", "meaning": "Lotus"},
+      {"name": "Gaurav", "meaning": "Honor, pride"},
+      {"name": "Nayan", "meaning": "Eye"},
+      {"name": "Nilesh", "meaning": "Blue god, Lord Shiva"}
+    ]
+  },
+  "punarvasu": {
+    "gender": "male",
+    "syllables": ["Ke", "Ko", "Ha", "Hi"],
+    "names": [
+      {"name": "Harsh", "meaning": "Happiness"},
+      {"name": "Keshav", "meaning": "Lord Krishna"},
+      {"name": "Kiran", "meaning": "Ray of light"},
+      {"name": "Himanshu", "meaning": "Moon"}
+    ]
+  },
+  "pushya": {
+    "gender": "female",
+    "syllables": ["Hu", "He", "Ho", "Da"],
+    "names": [
+      {"name": "Hema", "meaning": "Golden"},
+      {"name": "Heena", "meaning": "Mehndi, fragrance"},
+      {"name": "Daya", "meaning": "Compassion"},
+      {"name": "Daksha", "meaning": "Skilled, able"}
+    ]
+  },
+  "ashlesha": {
+    "gender": "female",
+    "syllables": ["De", "Du", "Dee", "Do"],
+    "names": [
+      {"name": "Deepa", "meaning": "Light, lamp"},
+      {"name": "Diksha", "meaning": "Initiation"},
+      {"name": "Devika", "meaning": "Little goddess"},
+      {"name": "Durga", "meaning": "Invincible, goddess"}
+    ]
+  },
+  "magha": {
+    "gender": "male",
+    "syllables": ["Ma", "Mi", "Mu", "Me"],
+    "names": [
+      {"name": "Manish", "meaning": "Wise"},
+      {"name": "Milan", "meaning": "Union"},
+      {"name": "Mukesh", "meaning": "Lord of liberation"},
+      {"name": "Mehul", "meaning": "Rain"}
+    ]
+  },
+  "purva_phalguni": {
+    "gender": "male",
+    "syllables": ["Mo", "Ta", "Ti", "Tu"],
+    "names": [
+      {"name": "Mohan", "meaning": "Enchanting"},
+      {"name": "Tarun", "meaning": "Young"},
+      {"name": "Tina", "meaning": "River"},
+      {"name": "Tushar", "meaning": "Snow, frost"}
+    ]
+  },
+  "uttara_phalguni": {
+    "gender": "male",
+    "syllables": ["Te", "To", "Pa", "Pe"],
+    "names": [
+      {"name": "Tejas", "meaning": "Radiance"},
+      {"name": "Tosh", "meaning": "Satisfaction"},
+      {"name": "Parth", "meaning": "King, Arjun"},
+      {"name": "Puneet", "meaning": "Pure"}
+    ]
+  },
+  "hasta": {
+    "gender": "female",
+    "syllables": ["Pu", "Sha", "Na", "Tha"],
+    "names": [
+      {"name": "Puja", "meaning": "Worship"},
+      {"name": "Sharanya", "meaning": "Surrender"},
+      {"name": "Nandini", "meaning": "Delightful"},
+      {"name": "Thara", "meaning": "Star"}
+    ]
+  },
+  "chitra": {
+    "gender": "female",
+    "syllables": ["Pe", "Po", "Ra", "Re"],
+    "names": [
+      {"name": "Pooja", "meaning": "Prayer"},
+      {"name": "Radhika", "meaning": "Worshiped"},
+      {"name": "Rekha", "meaning": "Line, limit"},
+      {"name": "Prachi", "meaning": "East, direction"}
+    ]
+  },
+  "swati": {
+    "gender": "female",
+    "syllables": ["Ru", "Re", "Ro", "Ta"],
+    "names": [
+      {"name": "Ruchi", "meaning": "Interest, taste"},
+      {"name": "Rekha", "meaning": "Line"},
+      {"name": "Roopa", "meaning": "Form, beauty"},
+      {"name": "Tara", "meaning": "Star"}
+    ]
+  },
+  "vishakha": {
+    "gender": "male",
+    "syllables": ["Ti", "Tu", "Te", "To"],
+    "names": [
+      {"name": "Tirth", "meaning": "Sacred place"},
+      {"name": "Tushar", "meaning": "Snow"},
+      {"name": "Tejas", "meaning": "Brilliance"},
+      {"name": "Taran", "meaning": "Raft, heaven"}
+    ]
+  },
+  "anuradha": {
+    "gender": "female",
+    "syllables": ["Na", "Ni", "Nu", "Ne"],
+    "names": [
+      {"name": "Naina", "meaning": "Eyes"},
+      {"name": "Nidhi", "meaning": "Treasure"},
+      {"name": "Nupur", "meaning": "Anklet"},
+      {"name": "Neha", "meaning": "Love, rain"}
+    ]
+  },
+  "jyestha": {
+    "gender": "male",
+    "syllables": ["No", "Ya", "Yi", "Yu"],
+    "names": [
+      {"name": "Yash", "meaning": "Fame, glory"},
+      {"name": "Yuvraj", "meaning": "Crown prince"},
+      {"name": "Yatin", "meaning": "Ascetic"},
+      {"name": "Yashwant", "meaning": "Famous"}
+    ]
+  },
+  "mula": {
+    "gender": "male",
+    "syllables": ["Ye", "Yo", "Ba", "Be"],
+    "names": [
+      {"name": "Yesh", "meaning": "Success"},
+      {"name": "Yogesh", "meaning": "Lord of Yoga"},
+      {"name": "Baldev", "meaning": "Godlike strength"},
+      {"name": "Bela", "meaning": "Time, moment"}
+    ]
+  },
+  "purva_ashadha": {
+    "gender": "male",
+    "syllables": ["Bhu", "Dha", "Pha", "Da"],
+    "names": [
+      {"name": "Bhushan", "meaning": "Ornament"},
+      {"name": "Dhaval", "meaning": "White, pure"},
+      {"name": "Phanish", "meaning": "Lord of serpents"},
+      {"name": "Darpan", "meaning": "Mirror"}
+    ]
+  },
+  "uttara_ashadha": {
+    "gender": "male",
+    "syllables": ["Bhe", "Bho", "Ja", "Ji"],
+    "names": [
+      {"name": "Bharat", "meaning": "India, universal king"},
+      {"name": "Bhavesh", "meaning": "Lord of the world"},
+      {"name": "Jatin", "meaning": "Saintly"},
+      {"name": "Jitendra", "meaning": "Conqueror of senses"}
+    ]
+  },
+  "shravana": {
+    "gender": "male",
+    "syllables": ["Ju", "Je", "Jo", "Gha"],
+    "names": [
+      {"name": "Jugal", "meaning": "Pair"},
+      {"name": "Jatin", "meaning": "Saintly"},
+      {"name": "Jogesh", "meaning": "Lord of Yoga"},
+      {"name": "Ghanashyam", "meaning": "Lord Krishna"}
+    ]
+  },
+  "dhanishta": {
+    "gender": "male",
+    "syllables": ["Ga", "Gi", "Gu", "Ge"],
+    "names": [
+      {"name": "Gagan", "meaning": "Sky"},
+      {"name": "Girish", "meaning": "Lord of mountains"},
+      {"name": "Gaurav", "meaning": "Honor"},
+      {"name": "Geet", "meaning": "Song"}
+    ]
+  },
+  "shatabhisha": {
+    "gender": "male",
+    "syllables": ["Go", "Sa", "Si", "Su"],
+    "names": [
+      {"name": "Sohan", "meaning": "Handsome"},
+      {"name": "Siddharth", "meaning": "One who has accomplished his goal"},
+      {"name": "Suresh", "meaning": "Lord of the gods"},
+      {"name": "Sumit", "meaning": "Well measured"}
+    ]
+  },
+  "purva_bhadrapada": {
+    "gender": "male",
+    "syllables": ["Se", "So", "Da", "Di"],
+    "names": [
+      {"name": "Sahil", "meaning": "Guide, shore"},
+      {"name": "Sohan", "meaning": "Handsome"},
+      {"name": "Dinesh", "meaning": "Lord of the day"},
+      {"name": "Divyansh", "meaning": "Part of the divine light"}
+    ]
+  },
+  "uttara_bhadrapada": {
+    "gender": "male",
+    "syllables": ["Du", "Tha", "Jha", "Na"],
+    "names": [
+      {"name": "Durgesh", "meaning": "Lord of Durga"},
+      {"name": "Thakur", "meaning": "Lord"},
+      {"name": "Jhanvi", "meaning": "River Ganges"},
+      {"name": "Nakul", "meaning": "One of the Pandavas"}
+    ]
+  },
+  "revati": {
+    "gender": "female",
+    "syllables": ["De", "Do", "Cha", "Chi"],
+    "names": [
+      {"name": "Devika", "meaning": "Little goddess"},
+      {"name": "Dona", "meaning": "Leader"},
+      {"name": "Charita", "meaning": "History, conduct"},
+      {"name": "Chitra", "meaning": "Picture, bright"}
+    ]
+  }
+}
