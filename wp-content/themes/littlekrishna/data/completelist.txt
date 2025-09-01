@@ -9210,7 +9210,9 @@ sejal = pure; depth in character selma = fair
 semanti = a white rose serena = quiet
 sesha = serpent who symbolizes time setu = sacred symbol
 seva = worship sevati = white rose
-sevita = cherishedshabab = beauty shabalini = a mossy
+sevita = cherishedshabab = beauty 
+
+shabalini = a mossy
 shabana = decorated
 shabari = devotee of lord rama shabnam = dew
 shabnum = sew
