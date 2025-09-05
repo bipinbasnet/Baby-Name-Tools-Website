@@ -33314,13 +33314,6 @@
     "name_type": "Traditional"
   },
   {
-    "name": "Sadaf",
-    "meaning": "Pearl",
-    "gender": "Girl",
-    "syllables": "Sa",
-    "name_type": "Modern"
-  },
-  {
     "name": "Sadgati",
     "meaning": "Liberation",
     "gender": "Girl",
@@ -33407,13 +33400,6 @@
   {
     "name": "Saesha",
     "meaning": "With great desire and wish",
-    "gender": "Girl",
-    "syllables": "Sa",
-    "name_type": "Modern"
-  },
-  {
-    "name": "Safia",
-    "meaning": "Chaste",
     "gender": "Girl",
     "syllables": "Sa",
     "name_type": "Modern"
@@ -33573,13 +33559,6 @@
     "name_type": "Modern"
   },
   {
-    "name": "Sakshi",
-    "meaning": "Witness",
-    "gender": "Girl",
-    "syllables": "Sa",
-    "name_type": "Traditional"
-  },
-  {
     "name": "Salena",
     "meaning": "The moon",
     "gender": "Girl",
@@ -33596,13 +33575,6 @@
   {
     "name": "Salima",
     "meaning": "Happy",
-    "gender": "Girl",
-    "syllables": "Sa",
-    "name_type": "Modern"
-  },
-  {
-    "name": "Salma",
-    "meaning": "Peace",
     "gender": "Girl",
     "syllables": "Sa",
     "name_type": "Modern"
@@ -33748,7 +33720,7 @@
     "name_type": "Modern"
   },
   {
-    "name": "Samrta",
+    "name": "Samarta",
     "meaning": "Provided with nectar",
     "gender": "Boy",
     "syllables": "Sa",
@@ -33857,7 +33829,7 @@
     "meaning": "Music",
     "gender": "Girl",
     "syllables": "Sa",
-    "name_type": "Traditional"
+    "name_type": "Modern"
   },
   {
     "name": "Sangya",
@@ -33899,7 +33871,7 @@
     "meaning": "Triumphant",
     "gender": "Boy",
     "syllables": "Sa",
-    "name_type": "Traditional"
+    "name_type": "Modern"
   },
   {
     "name": "Sanjita",
@@ -33934,7 +33906,7 @@
     "meaning": "Beautiful",
     "gender": "Girl",
     "syllables": "Sa",
-    "name_type": "Modern"
+    "name_type": "Traditional"
   },
   {
     "name": "Sankari",
@@ -34109,7 +34081,7 @@
     "meaning": "Straight, honest",
     "gender": "Girl",
     "syllables": "Sa",
-    "name_type": "Traditional"
+    "name_type": "Modern"
   },
   {
     "name": "Sarama",
@@ -34200,7 +34172,7 @@
     "meaning": "Goddess Durga; river",
     "gender": "Girl",
     "syllables": "Sa",
-    "name_type": "Traditional"
+    "name_type": "Modern"
   },
   {
     "name": "Sarjana",
@@ -34222,6 +34194,13 @@
     "gender": "Girl",
     "syllables": "Sa",
     "name_type": "Traditional"
+  },
+   {
+    "name": "Saroj",
+    "meaning": "Lotus; Born in Lakes, Bravery",
+    "gender": "Boy",
+    "syllables": "Sa",
+    "name_type": "Modern"
   },
   {
     "name": "Saroja",
@@ -34555,16 +34534,16 @@
   {
     "name": "Satyapriya",
     "meaning": "Devoted to truth",
-    "gender": "Boy",
+    "gender": "Girl",
     "syllables": "Sa",
-    "name_type": "Modern"
+    "name_type": "Traditional"
   },
   {
     "name": "Satyashree",
     "meaning": "Illustrious in truth",
-    "gender": "Boy",
+    "gender": "Girl",
     "syllables": "Sa",
-    "name_type": "Modern"
+    "name_type": "Traditional"
   },
   {
     "name": "Satyarupa",
@@ -34714,7 +34693,7 @@
     "name_type": "Traditional"
   },
   {
-    "name": "Saharsh",
+    "name": "Saharsha",
     "meaning": "With joy",
     "gender": "Boy",
     "syllables": "Sa",
@@ -34784,13 +34763,6 @@
     "name_type": "Traditional"
   },
   {
-    "name": "Salma",
-    "meaning": "Peace",
-    "gender": "Girl",
-    "syllables": "Sa",
-    "name_type": "Modern"
-  },
-  {
     "name": "Saloni",
     "meaning": "Beautiful",
     "gender": "Girl",
@@ -34834,7 +34806,7 @@
   },
   {
     "name": "Sanju",
-    "meaning": "",
+    "meaning": "Victorious",
     "gender": "Boy",
     "syllables": "Sa",
     "name_type": "Modern"
@@ -34856,6 +34828,13 @@
   {
     "name": "Sanjiv",
     "meaning": "One who gives life.",
+    "gender": "Boy",
+    "syllables": "Sa",
+    "name_type": "Modern"
+  },
+  {
+    "name": "Samir",
+    "meaning": "One who is loyal to everyone. Charming Boy.",
     "gender": "Boy",
     "syllables": "Sa",
     "name_type": "Modern"
