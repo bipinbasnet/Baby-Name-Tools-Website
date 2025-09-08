@@ -45,8 +45,7 @@
 
 <script>
   console.log("🟢 Inline JS test working");
-</script>
-
+  </script>
 
 </body>
 </html>

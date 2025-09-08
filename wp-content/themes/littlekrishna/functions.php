@@ -283,4 +283,66 @@ function fetch_baby_names() {
 }
 add_action('wp_ajax_fetch_baby_names', 'fetch_baby_names');
 add_action('wp_ajax_nopriv_fetch_baby_names', 'fetch_baby_names');
+
+//code to display names based on alphabet
+function enqueue_baby_names_script() {
+    wp_enqueue_script(
+        'baby-names-js',
+        get_template_directory_uri() . '/js/script.js',
+        ['jquery'],
+        '1.0.0',
+        true
+    );
+
+    wp_localize_script('baby-names-js', 'baby_ajax', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_baby_names_script');
+
+
+// === AJAX handler ===
+add_action('wp_ajax_get_filtered_names', 'wp_get_filtered_names');
+add_action('wp_ajax_nopriv_get_filtered_names', 'wp_get_filtered_names');
+
+function wp_get_filtered_names() {
+	$gender = isset($_POST['gender']) ? sanitize_text_field($_POST['gender']) : '';
+    $alphabet = isset($_POST['alphabet']) ? sanitize_text_field($_POST['alphabet']) : '';
+    $name_type = isset($_POST['name_type']) ? sanitize_text_field($_POST['name_type']) : '';
+
+    // ✅ Check required fields
+    if (empty($gender) || empty($alphabet)) {
+        wp_send_json_error('Gender and Alphabet are required.');
+    }
+    
+    $json_file = get_template_directory() . '/data/baby_names_full.json';
+
+    if (!file_exists($json_file)) {
+        wp_send_json_error(['message' => 'JSON file not found']);
+    }
+
+    $json_data = file_get_contents($json_file);
+    $names = json_decode($json_data, true);
+
+    // Get filters from AJAX request
+    $gender   = isset($_POST['gender']) ? sanitize_text_field($_POST['gender']) : '';
+    $alphabet = isset($_POST['alphabet']) ? sanitize_text_field($_POST['alphabet']) : '';
+    $nameType = isset($_POST['name_type']) ? sanitize_text_field($_POST['name_type']) : '';
+
+    // Filter data
+    $filtered = array_filter($names, function ($item) use ($gender, $alphabet, $nameType) {
+        if ($gender && strcasecmp($item['gender'], $gender) !== 0) {
+            return false;
+        }
+        if ($alphabet && stripos($item['name'], $alphabet) !== 0) {
+            return false;
+        }
+        if ($nameType && strcasecmp($item['name_type'], $nameType) !== 0) {
+            return false;
+        }
+        return true;
+    });
+
+    wp_send_json_success(array_values($filtered));
+}
 ?>

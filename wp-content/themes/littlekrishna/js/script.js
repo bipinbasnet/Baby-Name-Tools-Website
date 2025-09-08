@@ -91,4 +91,128 @@ document.addEventListener('DOMContentLoaded', function () {
     // Run on first load
     attachHeartListeners();
 });
-//test result
+//extract names based on alphabet
+jQuery(document).ready(function ($) {
+    // Ensure button exists before attaching
+    const btn = $("#generateNamesBtn");
+    if (btn.length) {
+        btn.on("click", function () {
+            $.ajax({
+                url: baby_ajax.ajaxurl,
+                type: "POST",
+                data: {
+                    action: "get_baby_names"
+                },
+                success: function (response) {
+                    let tableBody = $("#nameTableBody");
+                    tableBody.empty();
+
+                    if (response.success && response.data.length > 0) {
+                        $.each(response.data, function (index, item) {
+                            let row = `
+                                <tr>
+                                    <td>${item.name}</td>
+                                    <td>${item.meaning}</td>
+                                    <td>${item.name_type}</td>
+                                    <td>${item.gender}</td>
+                                </tr>`;
+                            tableBody.append(row);
+                        });
+                    } else {
+                        tableBody.append("<tr><td colspan='4'>No names found.</td></tr>");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX error:", xhr.responseText);
+                }
+            });
+        });
+    }
+});
+//baby name by alphabet
+jQuery(document).ready(function ($) {
+    $("#generateNamesBtn").on("click", function () {
+        let gender = $("#gender").val();
+        let alphabet = $("#alphabet").val();
+        let nameType = $("#nameType").val();
+        // ✅ Validate required fields
+        if (!gender) {
+            alert("Please select a Gender.");
+            return;
+        }
+        if (!alphabet) {
+            alert("Please select an Alphabet.");
+            return;
+        }
+
+        $.ajax({
+            url: baby_ajax.ajaxurl,
+            type: "POST",
+            data: {
+                action: "get_filtered_names",
+                gender: gender,
+                alphabet: alphabet,
+                name_type: nameType
+            },
+            success: function (response) {
+                let tableBody = $("#nameTableBody");
+                tableBody.empty();
+
+                if (response.success && response.data.length > 0) {
+                    $.each(response.data, function (index, item) {
+                        tableBody.append(`
+                            <tr>
+                                <td>${item.name}</td>
+                                <td>${item.meaning}</td>
+                                <td>${item.name_type}</td>
+                                <td><span class="heart" style="cursor:pointer;"><i class="fas fa-heart"></i></span></td>
+                            </tr>
+                        `);
+                    });
+                } else {
+                    tableBody.append("<tr><td colspan='3'>No names found.</td></tr>");
+                }
+            },
+            error: function (xhr, status, error) {
+                console.log("AJAX error:", xhr.responseText);
+            }
+        });
+    });
+});
+//reset button 
+jQuery(function ($) {
+  // Reset button click
+  $("#resetBtn").on("click", function () {
+    // Reset selects to default
+    $("#gender").prop("selectedIndex", 0);
+    $("#alphabet").prop("selectedIndex", 0);
+    $("#nameType").prop("selectedIndex", 0);
+
+    // Clear results table
+    $("#nameTableBody").html("<tr><td colspan='4'>Select filters and click \"Generate\".</td></tr>");
+
+    // Clear selected name text (if exists)
+    $("#selectedName").text("");
+
+    // Optional: Clear hearts if you want reset to remove favorites too
+    $(".heart").removeClass("liked");
+  });
+});
+
+//heat icon for baby names by alphabet page
+ function attachHeart() {
+    const hearts = document.querySelectorAll(".heart");
+    hearts.forEach(heart => {
+        heart.onclick = () => {
+            // Remove "liked" from all
+            hearts.forEach(h => h.classList.remove("liked"));
+
+            // Add "liked" to clicked heart
+            heart.classList.add("liked");
+
+            // Get name from the same row (first cell in table row)
+            const row = heart.closest("tr");
+            const name = row.querySelector("td:first-child").textContent;
+        };
+    });
+}

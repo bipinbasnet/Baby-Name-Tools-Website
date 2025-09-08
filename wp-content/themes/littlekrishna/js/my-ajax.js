@@ -28,3 +28,17 @@ jQuery(document).ready(function($) {
         }
     });
 });
+//generate names
+jQuery(document).ready(function ($) {
+    $.ajax({
+        url: baby_ajax.ajaxurl,
+        type: "POST",
+        data: { action: "get_baby_names" },
+        success: function (response) {
+            console.log("AJAX success:", response);
+        },
+        error: function (xhr, status, error) {
+            console.log("AJAX error:", xhr.responseText);
+        }
+    });
+});
