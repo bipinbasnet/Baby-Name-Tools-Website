@@ -67,7 +67,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 body {
-      padding-top: 70px;
       font-family: 'Segoe UI', sans-serif;
     }
 

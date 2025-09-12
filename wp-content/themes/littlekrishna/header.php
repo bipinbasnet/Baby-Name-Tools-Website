@@ -27,19 +27,37 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Hindu Baby Names</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!--a class="navbar-brand" href="#">Hindu Baby Names</a-->
+    <!--button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    </button-->
+    <!--div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active ms-3" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link active ms-3" href="http://localhost/wordpress/">Home</a></li>
+        <li class="nav-item"><a class="nav-link ms-3" href="http://localhost/wordpress/hindu-baby-name-generator/" target="_blank">Name Generator</a></li>
         <li class="nav-item"><a class="nav-link ms-3" href="#">Blog</a></li>
         <li class="nav-item"><a class="nav-link ms-3" href="#">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
       </ul>
-    </div>
+    </div-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">MinimalAura</a>
+          <?php
+          wp_nav_menu( array(
+              'theme_location'    => 'primary',
+              'depth'             => 2,
+              'container'         => 'div',
+              'container_class'   => 'collapse navbar-collapse',
+              'container_id'      => 'bs-example-navbar-collapse-1',
+              'menu_class'        => 'navbar-nav ms-auto',
+              'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+              'walker'            => new WP_Bootstrap_Navwalker(),
+          ) );
+        ?>
   </div>
 </nav>

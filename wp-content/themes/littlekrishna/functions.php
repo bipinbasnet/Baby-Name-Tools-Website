@@ -83,11 +83,9 @@ function littlekrishna_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'littlekrishna' ),
-		)
-	);
+	register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'THEMENAME' ),
+	) );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -345,4 +343,11 @@ function wp_get_filtered_names() {
 
     wp_send_json_success(array_values($filtered));
 }
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 ?>
