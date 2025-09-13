@@ -86,6 +86,7 @@ function littlekrishna_setup() {
 	register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'THEMENAME' ),
 	) );
+	register_nav_menu('main-menu', 'Main menu');
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -350,4 +351,23 @@ function register_navwalker(){
 	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+//register css bootstrap
+function theme_enqueue_scripts() {
+    // Bootstrap 4 CSS
+    wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css');
+
+    // Theme style
+    wp_enqueue_style('theme-style', get_stylesheet_uri());
+
+    // jQuery (already in WP)
+    wp_enqueue_script('jquery');
+
+    // Popper.js
+    wp_enqueue_script('popper-js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js', array('jquery'), null, true);
+
+    // Bootstrap 4 JS
+    wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js', array('jquery', 'popper-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+
 ?>

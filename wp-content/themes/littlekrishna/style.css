@@ -351,3 +351,42 @@ table td:first-child {
   background: #222;
   transform: scale(0.97);
 }
+/*menu item*/
+@media (min-width: 992px) {
+    #menu-main-menu {
+        margin-left: 550px !important; /* space between menu items only on desktop/laptop */
+    }
+}
+/*card title css*/
+.card-title a {
+  text-decoration: none;       /* remove underline */
+  color: #000;                 /* normal color */
+  transition: color 0.3s ease; /* smooth effect */
+}
+
+.card-title a:hover {
+  color: #007bff;              /* blue on hover (Bootstrap primary) */
+  text-decoration: underline;  /* optional: underline only on hover */
+}
+.card-title a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+.card-body .btn-primary, .gnt-btn .btn-primary {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-body .btn-primary:hover, .gnt-btn .btn-primary:hover {
+  border-color: #004085;
+  background: #000;   /* ✅ black on hover */
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+.card-body .btn-primary:focus, .gnt-btn .btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+
+

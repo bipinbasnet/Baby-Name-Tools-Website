@@ -56,7 +56,7 @@ get_header();
 
         </div>
 
-        <div class="col-12 text-center">
+        <div class="col-12 text-center gnt-btn">
           <button type="submit" class="btn btn-primary mt-3">Generate Names</button>
         </div>
       </form>
@@ -117,114 +117,53 @@ get_header();
   <div class="container">
     <h2 class="text-center mb-5">📚 Latest Blog Posts</h2>
     <div class="row g-4">
+      <div class="container my-5">
+  <div class="row">
+    <?php
+      $latest_posts = new WP_Query( array(
+        'post_type'      => 'post',
+        'posts_per_page' => 6,
+        'post_status'    => 'publish',
+        'category_name'  => 'blog'
+      ) );
 
-      <!-- Blog Post 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="<?php bloginfo('template_url'); ?>/img/1.jpg" class="card-img-top" alt="Blog Image" />
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-2">
-              <small class="text-muted">19th Oct, 19</small>
+      if ( $latest_posts->have_posts() ) :
+        while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
+          
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <?php if ( has_post_thumbnail() ) : ?>
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_post_thumbnail( 'medium', array( 'class' => 'card-img-top' ) ); ?>
+                </a>
+              <?php endif; ?>
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                    <small class="text-muted"><?php echo get_the_date(); ?></small>
+                 </div>   
+                  <h5 class="card-title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  </h5>
+                  <p class="card-text text-muted">
+                    <?php echo wp_trim_words( get_the_excerpt(), 20, '...' ); ?>
+                  </p>
+                  <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <?php echo get_avatar( get_the_author_meta('ID'), 50, '', '', array( 'class' => 'rounded-circle me-2' ) );?>
+                <small class="text-muted"><?php the_author(); ?></small>
+              </div>
             </div>
-            <h5 class="card-title">Quick guide on business with friends.</h5>
-            <p class="card-text text-muted">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
           </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="https://i.pravatar.cc/32?img=3" class="rounded-circle me-2" alt="Author" />
-            <small class="text-muted">Lisa Marvel</small>
-          </div>
-        </div>
-      </div>
+        <?php endwhile;
+        wp_reset_postdata();
+      else :
+        echo '<p>No posts found.</p>';
+      endif;
+    ?>
+  </div>
+</div>
 
-      <!-- Blog Post 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="<?php bloginfo('template_url'); ?>/img/2.jpeg" class="card-img-top" alt="Blog Image" />          
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-2">
-              <small class="text-muted">19th Oct, 19</small>
-            </div>
-            <h5 class="card-title">Become more money-minded</h5>
-            <p class="card-text text-muted">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
-          </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="https://i.pravatar.cc/32?img=1" class="rounded-circle me-2" alt="Author" />
-            <small class="text-muted">Joya Aafri</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="<?php bloginfo('template_url'); ?>/img/3.jpeg" class="card-img-top" alt="Blog Image" />
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-2">
-              <small class="text-muted">19th Oct, 19</small>
-            </div>
-            <h5 class="card-title">Quick guide on business with friends.</h5>
-            <p class="card-text text-muted">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
-          </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="https://i.pravatar.cc/32?img=4" class="rounded-circle me-2" alt="Author" />
-            <small class="text-muted">Martin Sobhe</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post 4 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="<?php bloginfo('template_url'); ?>/img/4.jpeg" class="card-img-top" alt="Blog Image" />
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-2">
-              <small class="text-muted">19th Oct, 19</small>
-            </div>
-            <h5 class="card-title">Quick guide on business with friends.</h5>
-            <p class="card-text text-muted">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
-          </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="https://i.pravatar.cc/32?img=4" class="rounded-circle me-2" alt="Author" />
-            <small class="text-muted">Martin Sobhe</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post 5 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="<?php bloginfo('template_url'); ?>/img/5.jpg" class="card-img-top" alt="Blog Image" />
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-2">
-              <small class="text-muted">19th Oct, 19</small>
-            </div>
-            <h5 class="card-title">Quick guide on business with friends.</h5>
-            <p class="card-text text-muted">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
-          </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="https://i.pravatar.cc/32?img=4" class="rounded-circle me-2" alt="Author" />
-            <small class="text-muted">Martin Sobhe</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post 6 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="<?php bloginfo('template_url'); ?>/img/6.webp" class="card-img-top" alt="Blog Image" />
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-2">
-              <small class="text-muted">19th Oct, 19</small>
-            </div>
-            <h5 class="card-title">Quick guide on business with friends.</h5>
-            <p class="card-text text-muted">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space.</p>
-          </div>
-          <div class="card-footer d-flex align-items-center">
-            <img src="https://i.pravatar.cc/32?img=4" class="rounded-circle me-2" alt="Author" />
-            <small class="text-muted">Martin Sobhe</small>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
