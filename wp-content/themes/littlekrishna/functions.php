@@ -376,4 +376,53 @@ function register_footer_menu() {
     ));
 }
 add_action('after_setup_theme', 'register_footer_menu');
+//breadcrumb
+function custom_breadcrumb() {
+    // Home link
+    echo '<nav aria-label="breadcrumb">';
+    echo '<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">';
+
+    // Home
+    echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope 
+          itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="' . home_url() . '">
+              <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>';
+
+     // Category (for single posts)
+    if (is_single()) {
+        $categories = get_the_category();
+        if ($categories) {
+            $cat = $categories[0];
+            echo '<li class="breadcrumb-item" itemprop="itemListElement" itemscope 
+                  itemtype="https://schema.org/ListItem">
+                    <a itemprop="item" href="' . get_category_link($cat->term_id) . '">
+                      <span itemprop="name">' . esc_html($cat->name) . '</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                  </li>';
+        }
+        // Post title
+        echo '<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" 
+              itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">' . get_the_title() . '</span>
+                <meta itemprop="position" content="4" />
+              </li>';
+    }     
+    
+
+    // Category/Archive pages
+    if (is_category() || is_archive()) {
+        echo '<li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" 
+              itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">' . single_cat_title('', false) . '</span>
+                <meta itemprop="position" content="3" />
+              </li>';
+    }
+
+    echo '</ol>';
+    echo '</nav>';
+}
 ?>
