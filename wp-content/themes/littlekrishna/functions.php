@@ -369,5 +369,11 @@ function theme_enqueue_scripts() {
     wp_enqueue_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js', array('jquery', 'popper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
-
+//footer widgets
+function register_footer_menu() {
+    register_nav_menus(array(
+        'footer-menu' => __('Footer Menu', 'minimalaura'),
+    ));
+}
+add_action('after_setup_theme', 'register_footer_menu');
 ?>

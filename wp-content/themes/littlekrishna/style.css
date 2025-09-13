@@ -387,6 +387,20 @@ table td:first-child {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3);
 }
+.footer a:hover {
+  color: #f1c40f !important;
+  text-decoration: underline;
+}
+.footer-menu li {
+    margin-bottom: 10px;
+}
 
+.footer-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
 
-
+.footer-menu li a:hover {
+    color: #0000FF;
+    text-decoration: none;
+}
