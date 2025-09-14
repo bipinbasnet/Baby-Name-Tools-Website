@@ -124,52 +124,6 @@ get_header();
 </section>
 <!--how it works ends here-->
 
-<!-- Popular Baby Names Section -->
-<section class="popular-section">
-  <div class="container">
-    <h2>🔥 Popular Baby Names</h2>
-    <div class="table-responsive baby-names-table">
-      <table class="table table-hover align-middle">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Meaning</th>
-            <th>Favorite</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Aarav</td>
-            <td>Boy</td>
-            <td>Peaceful and wise</td>
-            <td><i class="fas fa-heart heart-icon"></i></td>
-          </tr>
-          <tr>
-            <td>Anaya</td>
-            <td>Girl</td>
-            <td>Caring and compassionate</td>
-            <td><i class="fas fa-heart heart-icon"></i></td>
-          </tr>
-          <tr>
-            <td>Vivaan</td>
-            <td>Boy</td>
-            <td>Full of life</td>
-            <td><i class="fas fa-heart heart-icon"></i></td>
-          </tr>
-          <tr>
-            <td>Ishita</td>
-            <td>Girl</td>
-            <td>Desire, greatness</td>
-            <td><i class="fas fa-heart heart-icon"></i></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-
 <!-- Blog Section -->
 <section class="py-5 bg-light">
   <div class="container">
