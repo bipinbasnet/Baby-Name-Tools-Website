@@ -529,32 +529,178 @@ table td:first-child {
 }
 
 /* Sidebar */
-.sidebar .widget-title {
-  font-size: 1.1rem;
+:root{
+  --sidebar-width: 320px;
+  --widget-bg: #ffffff;
+  --widget-border: rgba(23,23,23,0.06);
+  --accent: #6b8cff;         /* change this to match your brand */
+  --muted: #6b6f7a;
+  --title-color: #1f2937;
+  --shadow: 0 6px 20px rgba(31,41,55,0.06);
+  --radius: 12px;
+  --gutter: 18px;
+  --font-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* container (optional) — ensures consistent spacing inside sidebar area */
+.sidebar {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--gutter);
+  font-family: var(--font-sans);
+}
+
+/* each widget as a card */
+.sidebar .widget {
+  background: var(--widget-bg);
+  border: 1px solid var(--widget-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin-bottom: 18px;
+  transition: transform .18s ease, box-shadow .18s ease;
+  overflow: hidden;
+}
+
+/* subtle lift on hover/focus (keyboard accessible) */
+.sidebar .widget:focus-within,
+.sidebar .widget:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(31,41,55,0.09);
+}
+
+/* Widget title styling */
+.sidebar .widget .widget-title,
+.sidebar .widget .title,
+.sidebar h3.widget-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px 0;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: var(--title-color);
   font-weight: 600;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
-.sidebar ul {
-  padding-left: 0;
+/* left accent bar */
+.sidebar .widget .widget-title::before {
+  content: "";
+  width: 44px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), rgba(107,140,255,0.65));
+  border-radius: 6px;
+  margin-right: 8px;
+  display: inline-block;
+  transform-origin: left center;
+  opacity: 0.98;
+}
+
+/* small subtitle or count — optional */
+.sidebar .widget .widget-title small {
+  display: block;
+  margin-left: auto;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: .85rem;
+}
+
+/* widget content — readable spacing */
+.sidebar .widget ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
 }
 
-.sidebar ul li {
+.sidebar .widget li {
+  padding: 10px;
+  border-radius: 8px;
+  transition: background .15s ease, transform .12s ease;
+}
+
+/* link inside item */
+.sidebar .widget a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+/* hover effect on each list item */
+.sidebar .widget li:hover,
+.sidebar .widget li:focus-within {
+  background: rgba(107,140,255,0.06);
+  transform: translateX(4px);
+}
+
+/* meta / small text inside widget items */
+.sidebar .widget .meta {
+  display: block;
+  color: var(--muted);
+  font-size: .86rem;
+  margin-top: 4px;
+}
+
+/* example: search or newsletter input style inside widget */
+.sidebar .widget .search-field,
+.sidebar .widget input[type="email"],
+.sidebar .widget input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(31,41,55,0.06);
+  box-sizing: border-box;
+  font-size: .95rem;
   margin-bottom: 8px;
 }
 
-.sidebar ul li a {
+/* CTA button inside widget */
+.sidebar .widget .btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--accent), #4363ff);
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  color: #212529;
-  transition: color 0.2s;
+  box-shadow: 0 8px 18px rgba(67,99,255,0.18);
 }
 
-.sidebar ul li a:hover {
-  color: #007bff;
+/* responsive behavior: make the sidebar full width under small screens if needed */
+@media (max-width: 900px) {
+  :root { --sidebar-width: 100%; }
+  .sidebar {
+    padding: 14px;
+  }
+  .sidebar .widget {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
 }
+
+/* if you use a 2-column layout in sidebar (eg. tags or mini-widgets) */
+.sidebar .widget .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* accessibility: focus styles for keyboard users */
+.sidebar .widget a:focus,
+.sidebar .widget button:focus,
+.sidebar .widget input:focus {
+  outline: 3px solid rgba(107,140,255,0.18);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+.wp-social-link a:hover{
+
+}
+
 
 .tag-cloud a {
   display: inline-block;
@@ -738,5 +884,36 @@ table td:first-child {
     color: #777;
     text-align: center;
     margin-top: 1.5rem;
+}
+.comment-form-url {
+  display: none;
+}
+/*FAQs Section CSS*/
+/* FAQ Section Styling */
+#faq h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+#faq .accordion-button {
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background-color: #f0f4ff;
+  color: #2c3e50;
+  box-shadow: none;
+}
+
+#faq .accordion-item {
+  border: none;
+}
+
+#faq .accordion-body {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
 }
 

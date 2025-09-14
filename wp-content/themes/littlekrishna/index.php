@@ -64,7 +64,65 @@ get_header();
   </div>
 </section>
 
+<!-- How It Works Section -->
+<!-- How It Works Section -->
+<section class="how-it-works py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold"><i class="bi bi-gear-fill text-primary me-2"></i>How It Works?</h2>
+      <p class="text-muted">Follow these simple steps to generate the perfect Hindu baby name</p>
+    </div>
+    
+    <div class="row g-4 text-center">
 
+      <!-- Step 1: Select Gender -->
+      <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+          <div class="icon mb-3">
+            <i class="bi bi-gender-ambiguous fs-1 text-primary"></i>
+          </div>
+          <h5 class="fw-bold">Step 1: Select Gender</h5>
+          <p class="text-muted">Choose whether the baby is a Boy or Girl to generate suitable names.</p>
+        </div>
+      </div>
+
+      <!-- Step 2: Select Nakshatra -->
+      <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+          <div class="icon mb-3">
+            <i class="bi bi-stars fs-1 text-warning"></i>
+          </div>
+          <h5 class="fw-bold">Step 2: Select Nakshatra</h5>
+          <p class="text-muted">Pick the baby’s Nakshatra (birth star) to get names aligned with Vedic traditions.</p>
+        </div>
+      </div>
+
+      <!-- Step 3: Select Alphabet Syllables -->
+      <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+          <div class="icon mb-3">
+            <i class="bi bi-fonts fs-1 text-success"></i>
+          </div>
+          <h5 class="fw-bold">Step 3: Select Syllables</h5>
+          <p class="text-muted">Choose starting syllables based on the Nakshatra selected for meaningful name suggestions.</p>
+        </div>
+      </div>
+
+      <!-- Step 4: Select Name Type -->
+      <div class="col-md-3">
+        <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+          <div class="icon mb-3">
+            <i class="bi bi-bookmarks fs-1 text-danger"></i>
+          </div>
+          <h5 class="fw-bold">Step 4: Select Name Type</h5>
+          <p class="text-muted">Pick whether you want Traditional or Modern Hindu names for the baby.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--how it works ends here-->
 
 <!-- Popular Baby Names Section -->
 <section class="popular-section">
@@ -163,11 +221,91 @@ get_header();
     ?>
   </div>
 </div>
-
-
     </div>
   </div>
 </section>
 
+<!--FAQs Section-->
+<section id="faq" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold"><i class="fa fa-question-circle" aria-hidden="true"></i>Frequently Asked Questions</h2>
+      <p class="text-muted">Find answers about our Hindu Baby Name Generator Tool</p>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+      <!-- FAQ Item 1 -->
+      <div class="accordion-item mb-3 shadow-sm rounded">
+        <h2 class="accordion-header" id="faqHeadingOne">
+          <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+            How does the Hindu Baby Name Generator work?
+          </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Our tool generates meaningful Hindu baby names based on <strong>Nakshatra, syllables, and cultural traditions</strong>. Just select your preferences and get a list of unique names instantly.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="accordion-item mb-3 shadow-sm rounded">
+        <h2 class="accordion-header" id="faqHeadingTwo">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+            Are the names based on Hindu astrology?
+          </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes ✅. The names are generated using traditional Hindu <strong>Nakshatra syllables</strong> and cultural practices, making them authentic and meaningful.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="accordion-item mb-3 shadow-sm rounded">
+        <h2 class="accordion-header" id="faqHeadingThree">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+            Can I find both modern and traditional names?
+          </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely 🙌. The tool suggests a mix of <strong>traditional Sanskrit names</strong> as well as <strong>modern, trendy names</strong> that still hold deep cultural meaning.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="accordion-item mb-3 shadow-sm rounded">
+        <h2 class="accordion-header" id="faqHeadingFour">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+            Is this tool free to use?
+          </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes 🎉. The Hindu Baby Name Generator is <strong>100% free to use</strong>. You can search unlimited times without any restrictions.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="accordion-item mb-3 shadow-sm rounded">
+        <h2 class="accordion-header" id="faqHeadingFive">
+          <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+            How often is the name database updated?
+          </button>
+        </h2>
+        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We regularly update the database to include <strong>new, culturally relevant Hindu names</strong> so you always get fresh and authentic suggestions.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--FAQs Section ends here-->
 <?php
 get_footer();

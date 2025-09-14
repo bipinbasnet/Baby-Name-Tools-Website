@@ -9,8 +9,26 @@
 
 get_header();
 ?>
-
-<?php if (function_exists('custom_breadcrumb')) custom_breadcrumb(); ?>
+<div class="breadcrumb-header py-5 width-100">
+    <div class="container-fluid d-flex flex-column flex-lg-row align-items-lg-center justify-content-between px-4">
+    
+    <!-- Left Side (Breadcrumb + Title + Date) -->
+    <div>
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="<?php echo home_url(); ?>">Home</a></li>
+          <?php  $categories = get_the_category();
+          if ($categories) {
+            $cat = $categories[0];
+            echo '<li class="breadcrumb-item"><span itemprop="name">' . esc_html($cat->name) . '</span></li>';}
+            ?>
+        </ol>
+      </nav>
+    </div>
+    
+  </div>
+</div>
 		
 <div class="container my-5" id="archive">
 	<h2 class="text-center mb-5 archive-title">📚 Blogs</h2>
